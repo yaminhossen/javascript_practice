@@ -89,3 +89,28 @@ console.log(countName(sentense), countName(sentense).countarr.length); */
     return 'not found!';
 }
 console.log(linearsearch([2, 4, 3, 5, 4], 4)); */
+
+// how to find biggest string in the array and that element index?
+
+/* let names = ['abir', 'tamim', 'nayeem', 'mahinjghjg'];
+function bigName(arr) {
+    let numarr = "";
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i].length > numarr.length){
+            numarr = arr[i];
+        }
+    }
+    return numarr;
+}
+console.log(bigName(names)); */
+
+// how to find the second largest string in the array?
+
+/* function secondLargest(arr) {
+    let newarr = arr.sort((a, b) => (b.length - a.length));
+    let finalvalue = newarr[1];
+    console.log(finalvalue);
+    
+}
+let names = ['abir', 'tamiddm', 'nayeem', 'mahinjghjg'];
+secondLargest(names) */
