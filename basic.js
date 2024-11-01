@@ -100,7 +100,7 @@ function bigName(arr) {
             numarr = arr[i];
         }
     }
-    return numarr;
+    return [numarr, arr.indexOf(numarr)];
 }
 console.log(bigName(names)); */
 
@@ -114,3 +114,69 @@ console.log(bigName(names)); */
 }
 let names = ['abir', 'tamiddm', 'nayeem', 'mahinjghjg'];
 secondLargest(names) */
+
+// find the value which is divided by the 3 and 5, from 1 to 100.
+
+/* function divided() {
+    let marr = [];
+    for (let i = 0; i < 100; i++) {
+        if(i%3 === 0 && i%5 === 0){
+            console.log(i);
+            marr.push(i);
+            
+        }
+        
+    }
+    return marr;
+}
+console.log(divided()); */
+
+// how to remove/delete falsey value from an array?
+
+const mixedArr = ['yamin', undefined, false, "", NaN, "k", 't', 66];
+
+// first way
+/* function falseRemover(arr) {
+    let newArr = [];
+    for (const el of arr) {
+        if(!el){
+            continue;
+        }
+        newArr.push(el);
+    }
+    console.log(newArr);
+    
+}
+falseRemover(mixedArr); */
+
+// second way
+/* function falseRemover2(arr) {
+    let trueArr = arr.filter((el) => (el))
+    console.log(trueArr);
+    
+}
+falseRemover2(mixedArr); */
+
+// how to delete/remove true value form an array?
+
+// first way
+/* function falseRemover(arr) {
+    let newArr = [];
+    for (const el of arr) {
+        if(el){
+            continue;
+        }
+        newArr.push(el);
+    }
+    console.log(newArr);
+    
+}
+falseRemover(mixedArr); */
+
+// second way
+/* function falseRemover2(arr) {
+    let trueArr = arr.filter((el) => (!el))
+    console.log(trueArr);
+    
+}
+falseRemover2(mixedArr); */
