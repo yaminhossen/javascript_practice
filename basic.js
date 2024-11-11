@@ -180,3 +180,101 @@ falseRemover(mixedArr); */
     
 }
 falseRemover2(mixedArr); */
+
+// sudoku solver implementation
+
+/* function solveSudoku(board) {
+    const findEmpty = (board) => {
+        for (let row = 0; row < 9; row++) {
+            for (let col = 0; col < 9; col++) {
+                if (board[row][col] === '.') {
+                    return [row, col]; // Return the first empty cell
+                }
+            }
+        }
+        return null; // No empty cells found
+    };
+
+    const isValid = (board, num, row, col) => {
+        // Check the row
+        for (let j = 0; j < 9; j++) {
+            if (board[row][j] === num) return false;
+        }
+
+        // Check the column
+        for (let i = 0; i < 9; i++) {
+            if (board[i][col] === num) return false;
+        }
+
+        // Check the 3x3 box
+        const boxRowStart = Math.floor(row / 3) * 3;
+        const boxColStart = Math.floor(col / 3) * 3;
+        for (let i = boxRowStart; i < boxRowStart + 3; i++) {
+            for (let j = boxColStart; j < boxColStart + 3; j++) {
+                if (board[i][j] === num) return false;
+            }
+        }
+
+        return true; // Number is valid
+    };
+
+    const backtrack = () => {
+        const emptyCell = findEmpty(board);
+        if (!emptyCell) return true; // Puzzle solved
+
+        const [row, col] = emptyCell;
+        for (let num = 1; num <= 9; num++) {
+            const numStr = num.toString();
+            if (isValid(board, numStr, row, col)) {
+                board[row][col] = numStr; // Place the number
+
+                if (backtrack()) return true; // Recursively attempt to solve
+
+                // Undo the move (backtrack)
+                board[row][col] = '.';
+            }
+        }
+
+        return false; // Trigger backtracking
+    };
+
+    backtrack(); // Start the backtracking process
+    return board; // Return the solved board
+}
+
+// Example usage:
+const board = [
+    ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+    ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+    ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+    ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+    ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+    ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+    ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+    ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+    ['.', '.', '.', '.', '8', '.', '.', '7', '9']
+];
+
+console.log(solveSudoku(board)); */
+// let b = 'yaminshahinnahin';
+// function aaa(par) {
+//     for (let i = 0; i < par.length; i++) {
+//         console.log(par.slice(i, i+1));
+//     }
+// };
+// aaa(b);
+
+// let numbers = [45, 4, 9, 16, 25];
+
+// function myFunc(total, value, index, array) {
+//     console.log(array);
+//     return total+value;
+// };
+
+// let newNumbers = numbers.reduce(myFunc, 10);
+// console.log(newNumbers);
+
+// let aaa = 'yaminhossen';
+// console.log(Array.from(aaa));
+// let a = new Date(milliseconds);
+console.log(Math.trunc(4.1));
