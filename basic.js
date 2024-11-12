@@ -277,4 +277,19 @@ console.log(solveSudoku(board)); */
 // let aaa = 'yaminhossen';
 // console.log(Array.from(aaa));
 // let a = new Date(milliseconds);
-console.log(Math.trunc(4.1));
+// console.log(Math.trunc(4.1));
+
+// let text = "i am from bangladesh you you to";
+// function some(array) {
+//     console.log(text.match(/[m]/ig));
+    
+// }
+
+// some(text);
+
+function same(age, ...arguments) {
+    console.log(`${this.name} er age ${arguments}`);
+};
+
+person = { name: 'yamin'};
+same.call(person, 20, 30, 40, 50, 60);
